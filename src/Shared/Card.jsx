@@ -50,7 +50,7 @@ export default function Card({
       <b className="text-xl mb-4">{title}</b>
 
       {/* Budget & Timing */}
-      <div className="mb-3 text-sm bg-[#CCCCCC]/30 w-[382px] mt-2 ">
+      <div className="mb-3 text-sm bg-[#CCCCCC]/30 w-[372px]  rounded mt-2 ">
         <p className="flex justify-between items-center p-6 h-[44px]">
           <b className="text-[#888888]">{budgetType}</b>{" "}
           <b className="text-[#4B4B4B]">
@@ -97,7 +97,7 @@ export default function Card({
       </p>
 
       <div>
-        <button className="bg-[#1E1E1E] hover:bg-[#05AF2B] rounded-full text-white h-[40px] w-[120px] ">
+        <button className="bg-[#1E1E1E] hover:bg-[#05AF2B] cursor-pointer rounded-full text-white h-[40px] w-[120px] ">
           Apply Now
         </button>
       </div>

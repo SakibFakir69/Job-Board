@@ -8,7 +8,8 @@ function Footer() {
 
       <section className="p-16 w-full">
 
-        {/* top */}
+        <div className="px-10 ml-10 ">
+          {/* top */}
         <div className="flex justify-around items-center px-6 ">
 
           <h2 className="text-2xl font-bold text-white flex-1 -mt-10">
@@ -16,12 +17,12 @@ function Footer() {
             Schedule
           </h2>
 
-          <div className="flex-1 flex flex-col gap-y-5">
-            <p className="text-[#CCCCCC]">
+          <div className="flex-1 flex flex-col gap-y-5 px-8">
+            <p className="text-[#CCCCCC] ">
               Sign up, complete your profile, and start browsing projects.
               Submit <br/> proposals and communicate with clients to get hired.
             </p>
-            <button className="btn bg-[#05af2b] text-white h-[40px] w-[120px]  rounded-[22px]">
+            <button className="btn  bg-[#05af2b] text-white h-[40px] w-[120px]  rounded-[22px]">
               Get Started
             </button>
           </div>
@@ -29,7 +30,7 @@ function Footer() {
 
         {/* mid */}
 
-        <div className=" flex  items-start justify-around  border border-t-white/10 p-4 mt-6">
+        <div className=" flex  items-start justify-around  border-t border-t-white/10 p-4 mt-6">
           <div>
             <img
               className="h-12 w-[212px] mt-4 -ml-12"
@@ -129,7 +130,7 @@ function Footer() {
 
         <div className="w-full flex justify-around  items-center">
           <div className="flex gap-x-5 flex-1 ">
-            <div className="bg-[#05AF2B]/60 h-40 w-40 blur-3xl  opacity-70 -mt-10 absolute"></div>
+            <div className="bg-[#05AF2B]/60 opacity-40 h-40 w-40 blur-3xl   -mt-10 absolute"></div>
 
             <FaFacebookF className="text-white bg-[#05AF2B] h-[48px] w-[48px] rounded-full p-2 z-50 relative" />
             <FaInstagram className="h-[48px] w-[48px] text-stone-200 p-2 bg-teal-200/20 rounded-full z-50 relative" />
@@ -149,9 +150,9 @@ function Footer() {
                   alt="footer"
                 />
 
-                <div className="flex flex-col gap-y-2 w-full">
+                <div className="flex flex-col gap-y-1 w-full mr-2 ">
                   <span className="text-color">November 7, 2024</span>
-                  <p className="text-white font-semibold">
+                  <p className="text-white text-sm font-semibold">
                     Unveils the Best Canadian Cities for Biking
                   </p>
                 </div>
@@ -164,7 +165,7 @@ function Footer() {
                   alt="footer"
                 />
 
-                <div className="flex flex-col gap-y-2 ">
+                <div className="flex flex-col  gap-y-1 w-full mr-2">
                   <span className="text-color">November 7, 2024</span>
                   <p className="text-white font-medium">
                     Unveils the Best Canadian Cities for Biking
@@ -174,6 +175,9 @@ function Footer() {
             </div>
           </div>
         </div>
+        </div>
+
+        
       </section>
       <div className="w-full justify-center items-center h-14">
         <p className="text-color flex justify-center items-center">

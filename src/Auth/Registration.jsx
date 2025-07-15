@@ -85,7 +85,7 @@ function Registration() {
     }
   };
   return (
-    <div className="bg-[#071400] m-16 p-14 rounded-2xl">
+    <div className="bg-[#071400] m-30 p-14 rounded-2xl">
       <ToastContainer/>
       <div className="h-48 w-44 bg-green-500 blur-[100px] opacity-60 absolute right-1/2 top-1/2 mt-20"></div>
       <section className="flex  w-full justify-center  gap-x-6">

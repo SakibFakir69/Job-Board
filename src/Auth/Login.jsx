@@ -17,6 +17,7 @@ import { IoIosUnlock } from "react-icons/io";
 
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-router";
 
 function Login() {
   const [isEyeOpen, setIsEyeOpen] = useState(false);
@@ -100,22 +101,22 @@ function Login() {
   };
 
   return (
-    <div className="bg-[#071400] m-16 p-14 rounded-2xl">
+    <div className="bg-[#071400] m-30 p-14 rounded-2xl">
       <ToastContainer />
 
       <div className="h-48 w-44 bg-green-500 blur-[100px] opacity-60 absolute right-1/2 top-1/2 mt-20">
 
       </div>
-      <section className="flex  w-full justify-center  gap-x-6">
-        <div className="flex-1 w-[442px] h-[682px] flex flex-col gap-y-8">
-          <div className="flex flex-col   justify-center items-center  gap-y-9  ">
-            <div className="-mt-5 flex flex-col gap-y-4">
+      <section className="flex  w-full justify-center  gap-x-6 ">
+        <div className="flex-1 w-[442px] h-[682px] flex flex-col gap-y-8 ">
+          <div className="flex flex-col   justify-center items-center  gap-y-16 ">
+            <div className="-mt-5 flex flex-col gap-y-4 mt-8" m>
               <h2 className="text-3xl font-semibold text-white">
                 Open your account
               </h2>
               <p className="text-white">
                 Already have an account?
-                <span className="text-green-400"> Sign in</span>
+                <Link to={'/auth/registration'} className="text-green-400"> Sign in</Link>
               </p>
             </div>
 
