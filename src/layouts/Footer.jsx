@@ -4,10 +4,13 @@ import { BsInstagram, BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa6";
 function Footer() {
   return (
-    <div className="bg-black w-full">
-      <section className="p-14 w-full">
+    <div className="bg-[#071400] w-full">
+
+      <section className="p-16 w-full">
+
         {/* top */}
-        <div className="flex justify-around items-center ">
+        <div className="flex justify-around items-center px-6 ">
+
           <h2 className="text-2xl font-bold text-white flex-1 -mt-10">
             Reach Your Requirement Goals Right on <br />
             Schedule
@@ -16,7 +19,7 @@ function Footer() {
           <div className="flex-1 flex flex-col gap-y-5">
             <p className="text-[#CCCCCC]">
               Sign up, complete your profile, and start browsing projects.
-              Submit proposals and communicate with clients to get hired.
+              Submit <br/> proposals and communicate with clients to get hired.
             </p>
             <button className="btn bg-[#05af2b] text-white h-[40px] w-[120px]  rounded-[22px]">
               Get Started
@@ -26,40 +29,40 @@ function Footer() {
 
         {/* mid */}
 
-        <div className=" flex  items-start justify-around  border border-t-white/10 p-4">
+        <div className=" flex  items-start justify-around  border border-t-white/10 p-4 mt-6">
           <div>
             <img
-              className="h-20 w-[212px] mt-4 -ml-12"
-              src={"521ed31f20ef6319a6b45c9c3855d0e9e1d4837f.png"}
+              className="h-12 w-[212px] mt-4 -ml-12"
+              src={"/521ed31f20ef6319a6b45c9c3855d0e9e1d4837f.png"}
             />
           </div>
-          <div className="text-white shadow-md p-4 rounded w-52 space-y-2 flex flex-col gap-y-4 ">
+          <div className="text-white shadow-md p-4 rounded w-52 space-y-2 flex flex-col  gap-y-4 ">
             <h2 className="text-lg font-semibold mb-3 text-white"> About US</h2>
 
-            <div className="flex flex-col gap-y-2.5">
+            <div className="flex flex-col gap-y-2.5 items-start">
               <a
                 href="/about-us"
-                className="block text-black hover:text-teal-600"
+                className="block text-black hover:text-teal-600 a-color"
               >
                 About Us
               </a>
 
               <a
                 href="/become-seller"
-                className="block text-black hover:text-teal-600"
+                className="block text-black hover:text-teal-600 a-color"
               >
                 Become Seller
               </a>
               <a
                 href="/proprojobs"
-                className="block text-black hover:text-teal-600"
+                className="block text-black hover:text-teal-600 a-color"
               >
                 ProProJobs
               </a>
             </div>
           </div>
 
-          <div className=" shadow-md rounded w-64 flex flex-col gap-y-4 border border-white/10 justify-center items-center p-4">
+          <div className=" shadow-md rounded w-64 flex flex-col gap-y-4 border border-white/7 justify-center items-start p-4">
             <h2 className="text-lg font-semibold mb-3 text-white">
               Categories
             </h2>
@@ -67,54 +70,54 @@ function Footer() {
             <div className=" flex flex-col gap-y-2.5">
               <a
                 href="/categories/design"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Design & Creative
               </a>
               <a
                 href="/categories/development"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Development & IT
               </a>
               <a
                 href="/categories/music"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Music & Audio
               </a>
               <a
                 href="/categories/programming"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Programming & Tech
               </a>
             </div>
           </div>
-          <div className=" shadow-md p-4 rounded w-64 flex flex-col gap-y-4 border border-white/10 justify-center items-center p-2">
+          <div className=" shadow-md p-4 rounded w-64 flex flex-col gap-y-4 border border-white/7 justify-center items-start">
             <h2 className="text-lg font-semibold mb-3 text-white ">Support</h2>
             <div className=" flex flex-col gap-y-2.5">
               <a
                 href="/support/help"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Help & Support
               </a>
               <a
                 href="/support/faq"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 FAQ
               </a>
               <a
                 href="/support/contact"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Contact Us
               </a>
               <a
                 href="/support/terms"
-                className="block text-gray-800 hover:text-teal-600"
+                className="block text-gray-800 hover:text-teal-600 a-color"
               >
                 Terms & Services
               </a>
@@ -142,7 +145,7 @@ function Footer() {
               <div className="flex gap-x-6  w-full mt-4 ">
                 <img
                   className="w-[106px] h-[72px]"
-                  src="aa47ed3130811f2c3a7bb959926a068ce1a7e389.jpg"
+                  src="/aa47ed3130811f2c3a7bb959926a068ce1a7e389.jpg"
                   alt="footer"
                 />
 
@@ -157,7 +160,7 @@ function Footer() {
               <div className="flex gap-x-6  border  w-full">
                 <img
                   className="w-[106px] h-[72px]"
-                  src="aa47ed3130811f2c3a7bb959926a068ce1a7e389.jpg"
+                  src="/aa47ed3130811f2c3a7bb959926a068ce1a7e389.jpg"
                   alt="footer"
                 />
 

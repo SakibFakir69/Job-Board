@@ -21,22 +21,16 @@ export const route = createBrowserRouter([
                 path:'/',
                 element:<Home/>
 
-            }
-        ]
-    },
-    {
-        path:'auth',
-        element:<Authlayoutes/>,
-        children:[
-
-            {
+            },
+             {
                 path:'/auth/login',
                 element:<Login/>
             },
             {
-                path:'/auth/registration ',
+                path:'/auth/registration',
                 element:<Registration/>
             }
         ]
-    }
+    },
+   
 ])

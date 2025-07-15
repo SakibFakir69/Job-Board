@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 
-a{
-  color: white;
-}
+
 .text-color{
   color: #bdbebc;
+}
+.a-color{
+  color: #CCCCCC;
 }
