@@ -8,16 +8,20 @@ function Navbar() {
 
   console.log(ishome);
 
+  // // className={`${
+  //       ishome !== "/" && "h-[220px] "
+  //     } bg-[#071400] py-16 h-[100px]`}
+
   return (
-    <div className="bg-[#071400] w-full p-10">
+    <div
 
-      <div className="h-20 w-20 -mt-10 bg-green-400 blur-3xl absolute">
+    className={`${ishome==='/' ? "bg-[#071400] py-16 h-[220px] " : " bg-[#071400] py-10 "}`}
+      
+    >
+      <div className="h-20 w-20 z-40 -mt-6 bg-green-400 blur-3xl absolute"></div>
 
-      </div>
-
-      <nav className=" flex  justify-around gap-x-36 -mt-10 p-4">
+      <nav className=" flex  justify-around gap-x-36 ">
         <div>
-
           <img
             className="w-[234px] h-[59px]"
             src={"/521ed31f20ef6319a6b45c9c3855d0e9e1d4837f.png"}
@@ -25,7 +29,6 @@ function Navbar() {
         </div>
 
         <div className="flex justify-center items-center gap-x-4">
-
           <div className="border p-2 bg-teal-200/20 w-[345px] flex  h-[50px] rounded">
             <div className="p-1 ">
               <select className="text-white  -mt-1.5 p-1 bg-teal-200/10 flex justify-center items-center  w-[122px] h-[36px]">
@@ -43,12 +46,13 @@ function Navbar() {
           </button>
         </div>
       </nav>
-      <p className="w-full border-2 border-white/5"></p>
+
+      {ishome === "/" && <p className="w-full border-2 border-white/5"></p>}
 
       {ishome === "/" ? (
-        <div className="w-full flex justify-around items-center">
-          <div className="border flex gap-x-4">
-            <form className="relative w-[566px] h-[58px]">
+        <div className=" w-[1920] flex justify-around items-center bg-[#071400] ">
+          <div className="border flex justify-start gap-x-4">
+            <form className="relative w-[566px] h-[58px] -ml-9">
               {/* Input field */}
               <input
                 type="search"

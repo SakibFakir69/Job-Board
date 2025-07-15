@@ -1,118 +1,201 @@
 
-
 {
-    "status": true,
-    "count": 1,
-    "next": null,
-    "previous": null,
-    "data": [
-        {
-            "id": 1,
-            "category": {
-                "id": 1,
-                "title": "Programming & Tech"
-            },
-            "sub_category": {
-                "id": 1,
-                "title": "Custom Software"
-            },
-            "job_type": {
-                "id": 1,
-                "title": "Short Term Project",
-                "slug": "short-term-project"
-            },
-            "skills": [
-                {
-                    "id": 1,
-                    "label": "Python",
-                    "value": null
-                },
-                {
-                    "id": 2,
-                    "label": "Django",
-                    "value": null
-                },
-                {
-                    "id": 3,
-                    "label": "React",
-                    "value": null
-                },
-                {
-                    "id": 4,
-                    "label": "Node",
-                    "value": null
-                },
-                {
-                    "id": 5,
-                    "label": "Marn-Stack",
-                    "value": null
-                }
-            ],
-            "language": [
-                {
-                    "id": 1,
-                    "title": "Bangla",
-                    "slug": "bangla"
-                },
-                {
-                    "id": 2,
-                    "title": "English",
-                    "slug": "english"
-                }
-            ],
-            "keywords": [
-                {
-                    "id": 1,
-                    "title": "software",
-                    "slug": "software"
-                },
-                {
-                    "id": 2,
-                    "title": "website",
-                    "slug": "website"
-                },
-                {
-                    "id": 3,
-                    "title": "custom software",
-                    "slug": "custom-software"
-                },
-                {
-                    "id": 4,
-                    "title": "website development",
-                    "slug": "website-development"
-                },
-                {
-                    "id": 5,
-                    "title": "website design",
-                    "slug": "website-design"
-                }
-            ],
-            "job_attachments": [
-                {
-                    "id": 1,
-                    "file": "https://api.mnimedu.com/media/buyer/pro-job/avatarmale.png"
-                },
-                {
-                    "id": 2,
-                    "file": "https://api.mnimedu.com/media/buyer/pro-job/avatarfemale.png"
-                }
-            ],
-            "job_applications": [],
-            "status": "Approved",
-            "hiring_status": "Open",
-            "is_active": true,
-            "title": "Job One Title",
-            "slug": "job-one-title",
-            "budget_type": "Fixed Rate",
-            "rate_from": "350.00",
-            "rate_to": "450.00",
-            "job_description": "Job One Title",
-            "hiring_capacity": "5",
-            "experience_level": "Entry Level",
-            "project_duration": "3 Month",
-            "created_at": "2025-07-10T16:41:25.275896+06:00",
-            "updated_at": "2025-07-10T16:41:25.275919+06:00",
-            "buyer": 1
-        }
-    ]
+  "status": true,
+  "count": 6,
+  "next": null,
+  "previous": null,
+  "data": [
+    {
+      "id": 1,
+      "title": "React Developer Needed",
+      "job_description": "Build a dashboard using React and REST APIs. Must follow design mockups and write clean code.",
+      "budget_type": "Fixed Rate",
+      "rate_from": "250.00",
+      "rate_to": "400.00",
+      "hiring_capacity": "1",
+      "experience_level": "Intermediate",
+      "project_duration": "1 Month",
+      "created_at": "2025-07-14T10:00:00Z",
+      "updated_at": "2025-07-14T10:00:00Z",
+      "status": "Approved",
+      "hiring_status": "Open",
+      "is_active": true,
+      "slug": "react-developer-needed",
+      "buyer": 1,
+      "category": { "id": 1, "title": "Programming & Tech" },
+      "sub_category": { "id": 1, "title": "Web Development" },
+      "job_type": { "id": 1, "title": "Short Term Project", "slug": "short-term-project" },
+      "skills": [
+        { "id": 1, "label": "React", "value": null },
+        { "id": 2, "label": "JavaScript", "value": null }
+      ],
+      "language": [{ "id": 1, "title": "English", "slug": "english" }],
+      "keywords": [
+        { "id": 1, "title": "frontend", "slug": "frontend" },
+        { "id": 2, "title": "dashboard", "slug": "dashboard" }
+      ],
+      "job_attachments": [],
+      "job_applications": []
+    },
+    {
+      "id": 2,
+      "title": "Landing Page Designer",
+      "job_description": "Design a modern landing page using Figma. Must be responsive and clean for mobile and desktop.",
+      "budget_type": "Hourly Rate",
+      "rate_from": "15.00",
+      "rate_to": "25.00",
+      "hiring_capacity": "1",
+      "experience_level": "Entry Level",
+      "project_duration": "2 Weeks",
+      "created_at": "2025-07-13T08:00:00Z",
+      "updated_at": "2025-07-13T08:00:00Z",
+      "status": "Approved",
+      "hiring_status": "Open",
+      "is_active": true,
+      "slug": "landing-page-designer",
+      "buyer": 2,
+      "category": { "id": 2, "title": "Design & Creative" },
+      "sub_category": { "id": 2, "title": "UI/UX Design" },
+      "job_type": { "id": 2, "title": "One-time Task", "slug": "one-time-task" },
+      "skills": [
+        { "id": 3, "label": "Figma", "value": null },
+        { "id": 4, "label": "Tailwind CSS", "value": null }
+      ],
+      "language": [{ "id": 2, "title": "Bangla", "slug": "bangla" }],
+      "keywords": [
+        { "id": 3, "title": "design", "slug": "design" },
+        { "id": 4, "title": "landing page", "slug": "landing-page" }
+      ],
+      "job_attachments": [],
+      "job_applications": []
+    },
+    {
+      "id": 3,
+      "title": "API Integration Expert",
+      "job_description": "Integrate Stripe and SendGrid into existing Node.js backend. Quick task for a backend expert.",
+      "budget_type": "Fixed Rate",
+      "rate_from": "150.00",
+      "rate_to": "250.00",
+      "hiring_capacity": "1",
+      "experience_level": "Advanced",
+      "project_duration": "3 Days",
+      "created_at": "2025-07-12T12:00:00Z",
+      "updated_at": "2025-07-12T12:00:00Z",
+      "status": "Approved",
+      "hiring_status": "Open",
+      "is_active": true,
+      "slug": "api-integration-expert",
+      "buyer": 3,
+      "category": { "id": 1, "title": "Programming & Tech" },
+      "sub_category": { "id": 3, "title": "Backend Development" },
+      "job_type": { "id": 3, "title": "One-time Task", "slug": "one-time" },
+      "skills": [
+        { "id": 5, "label": "Node.js", "value": null },
+        { "id": 6, "label": "API", "value": null }
+      ],
+      "language": [{ "id": 1, "title": "English", "slug": "english" }],
+      "keywords": [
+        { "id": 5, "title": "backend", "slug": "backend" },
+        { "id": 6, "title": "integration", "slug": "integration" }
+      ],
+      "job_attachments": [],
+      "job_applications": []
+    },
+    {
+      "id": 4,
+      "title": "Content Writer for Blogs",
+      "job_description": "Write SEO-friendly blog posts for a tech website. Must be creative and write in a professional tone.",
+      "budget_type": "Fixed Rate",
+      "rate_from": "100.00",
+      "rate_to": "200.00",
+      "hiring_capacity": "1",
+      "experience_level": "Intermediate",
+      "project_duration": "1 Week",
+      "created_at": "2025-07-11T14:00:00Z",
+      "updated_at": "2025-07-11T14:00:00Z",
+      "status": "Approved",
+      "hiring_status": "Open",
+      "is_active": true,
+      "slug": "content-writer-for-blogs",
+      "buyer": 4,
+      "category": { "id": 3, "title": "Writing & Translation" },
+      "sub_category": { "id": 4, "title": "Article Writing" },
+      "job_type": { "id": 1, "title": "Short Term Project", "slug": "short-term" },
+      "skills": [
+        { "id": 7, "label": "Writing", "value": null },
+        { "id": 8, "label": "SEO", "value": null }
+      ],
+      "language": [{ "id": 1, "title": "English", "slug": "english" }],
+      "keywords": [
+        { "id": 7, "title": "blog", "slug": "blog" },
+        { "id": 8, "title": "seo", "slug": "seo" }
+      ],
+      "job_attachments": [],
+      "job_applications": []
+    },
+    {
+      "id": 5,
+      "title": "Translate Document",
+      "job_description": "Translate 10-page document from Bangla to English. Legal terminology knowledge is a plus.",
+      "budget_type": "Fixed Rate",
+      "rate_from": "80.00",
+      "rate_to": "120.00",
+      "hiring_capacity": "1",
+      "experience_level": "Entry Level",
+      "project_duration": "5 Days",
+      "created_at": "2025-07-10T09:00:00Z",
+      "updated_at": "2025-07-10T09:00:00Z",
+      "status": "Approved",
+      "hiring_status": "Open",
+      "is_active": true,
+      "slug": "translate-document",
+      "buyer": 5,
+      "category": { "id": 3, "title": "Writing & Translation" },
+      "sub_category": { "id": 5, "title": "Translation" },
+      "job_type": { "id": 3, "title": "One-time Task", "slug": "one-time" },
+      "skills": [
+        { "id": 9, "label": "Bangla", "value": null },
+        { "id": 10, "label": "Translation", "value": null }
+      ],
+      "language": [{ "id": 2, "title": "Bangla", "slug": "bangla" }],
+      "keywords": [
+        { "id": 9, "title": "translate", "slug": "translate" },
+        { "id": 10, "title": "document", "slug": "document" }
+      ],
+      "job_attachments": [],
+      "job_applications": []
+    },
+    {
+      "id": 6,
+      "title": "Logo Designer",
+      "job_description": "Create a modern and minimalist logo for a mobile app. Must deliver in SVG and PNG formats.",
+      "budget_type": "Fixed Rate",
+      "rate_from": "50.00",
+      "rate_to": "100.00",
+      "hiring_capacity": "1",
+      "experience_level": "Entry Level",
+      "project_duration": "3 Days",
+      "created_at": "2025-07-09T13:00:00Z",
+      "updated_at": "2025-07-09T13:00:00Z",
+      "status": "Approved",
+      "hiring_status": "Open",
+      "is_active": true,
+      "slug": "logo-designer",
+      "buyer": 6,
+      "category": { "id": 2, "title": "Design & Creative" },
+      "sub_category": { "id": 6, "title": "Logo Design" },
+      "job_type": { "id": 2, "title": "One-time Task", "slug": "one-time-task" },
+      "skills": [
+        { "id": 11, "label": "Illustrator", "value": null },
+        { "id": 12, "label": "Logo Design", "value": null }
+      ],
+      "language": [{ "id": 1, "title": "English", "slug": "english" }],
+      "keywords": [
+        { "id": 11, "title": "logo", "slug": "logo" },
+        { "id": 12, "title": "branding", "slug": "branding" }
+      ],
+      "job_attachments": [],
+      "job_applications": []
+    }
+  ]
 }

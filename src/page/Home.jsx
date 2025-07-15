@@ -21,7 +21,7 @@ function Home() {
   })
 
   return (
-    <div className="p-16">
+    <div className="p-16 grid  md:grid-cols-3 grid-cols-1 gap-4">
       {listofJob.map((post) => (
       <Card
         key={post.id}

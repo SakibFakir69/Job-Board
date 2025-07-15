@@ -15,6 +15,9 @@ import { useForm } from "react-hook-form";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoIosUnlock } from "react-icons/io";
 
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+
 function Login() {
   const [isEyeOpen, setIsEyeOpen] = useState(false);
   const [StrongPassword, setStrongPassword] = useState("");
@@ -26,7 +29,29 @@ function Login() {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    try {
+      const { password, email, confirmPassword } = data;
+
+      if (!password || !email || !confirmPassword) {
+        toast.error("Please Enter info");
+        return;
+      }
+      const res = await axios.post(
+        `http://api.mnimedu.com/api/auth/login/`,
+        data
+      );
+
+      if (!res.status != 200) {
+        toast.error("Login failed");
+      }
+
+      console.log(res);
+    } catch (error) {
+      toast.error("faild to login");
+    }
+  };
 
   const handlePasswordChange = (e) => {
     const password = e.target.value;
@@ -76,6 +101,11 @@ function Login() {
 
   return (
     <div className="bg-[#071400] m-16 p-14 rounded-2xl">
+      <ToastContainer />
+
+      <div className="h-48 w-44 bg-green-500 blur-[100px] opacity-60 absolute right-1/2 top-1/2 mt-20">
+
+      </div>
       <section className="flex  w-full justify-center  gap-x-6">
         <div className="flex-1 w-[442px] h-[682px] flex flex-col gap-y-8">
           <div className="flex flex-col   justify-center items-center  gap-y-9  ">
@@ -89,12 +119,10 @@ function Login() {
               </p>
             </div>
 
-          
             <form onSubmit={handleSubmit(onSubmit)} className="w-[442px]">
               {/* Email Field */}
               <div className="relative mb-6">
-                     <MdOutlineMailOutline className="absolute top-4 left-4 text-stone-300 size-5 " />
-                
+                <MdOutlineMailOutline className="absolute top-4 left-4 text-stone-300 size-5 " />
 
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                   <svg
@@ -123,9 +151,8 @@ function Login() {
 
               {/* Password Field */}
               <div className="w-full mb-4">
-               
                 <div className="w-full relative">
-                        <IoIosUnlock className="absolute top-4 left-4 text-stone-300 size-5" />
+                  <IoIosUnlock className="absolute top-4 left-4 text-stone-300 size-5" />
                   <input
                     type={isEyeOpen ? "text" : "password"}
                     {...register("password", {
@@ -157,7 +184,7 @@ function Login() {
                     </p>
                   )}
 
-                   {isEyeOpen ? (
+                  {isEyeOpen ? (
                     <IoEyeOutline
                       className="absolute top-3.5 size-6 right-4 text-[#777777] cursor-pointer"
                       onClick={() => setIsEyeOpen(false)}
@@ -173,9 +200,8 @@ function Login() {
 
               {/* Confirm Password Field */}
               <div className="w-full mb-6">
-                
                 <div className="w-full relative">
-                    <IoIosUnlock className="absolute top-4 left-4 text-stone-300 size-5" />
+                  <IoIosUnlock className="absolute top-4 left-4 text-stone-300 size-5" />
                   <input
                     type={isEyeOpen ? "text" : "password"}
                     {...register("confirmPassword", {
@@ -191,7 +217,7 @@ function Login() {
                       {errors.confirmPassword.message}
                     </p>
                   )}
-                   {isEyeOpen ? (
+                  {isEyeOpen ? (
                     <IoEyeOutline
                       className="absolute top-3.5 size-6 right-4 text-[#777777] cursor-pointer"
                       onClick={() => setIsEyeOpen(false)}
@@ -203,13 +229,12 @@ function Login() {
                     />
                   )}
                 </div>
-
               </div>
 
               <div className="w-full">
                 <button
                   type="submit"
-                  className="bg-[#05af2b] h-[50px] rounded-full text-white w-full"
+                  className="bg-[#05af2b] h-[50px] rounded-full text-white w-full cursor-pointer"
                 >
                   Create Account
                 </button>
@@ -219,30 +244,29 @@ function Login() {
 
           <div className="flex justify-center items-center flex-col p-4 gap-y-5">
             {/* divider */}
-          <div className="flex w-[442px] justify-between items-center gap-8 -mt-5">
-            <hr className="w-full border border-stone-300" />
-            <div className="divider text-white ">or</div>
-            <hr className="w-full border border-stone-300" />
-          </div>
-          {/* icon */}
+            <div className="flex w-[442px] justify-between items-center gap-8 -mt-5">
+              <hr className="w-full border border-stone-800" />
+              <div className="divider text-white ">or</div>
+              <hr className="w-full border border-stone-800" />
+            </div>
+            {/* icon */}
 
-          <div className="w-full flex gap-x-4 justify-center items-center ">
-            <FaFacebookF className="text-white  bg-[#1E1E1E] h-[60px] w-[120px]  rounded-[46px] p-3" />
-            <FaApple className="text-white  bg-[#1E1E1E] h-[60px] w-[120px]  rounded-[46px] p-3" />
-            <RiTwitterXLine className="text-white  bg-[#1E1E1E] h-[60px] w-[120px]  rounded-[46px] p-3" />
+            <div className="w-full flex gap-x-4 justify-center items-center ">
+              <FaFacebookF className="text-white  bg-[#1E1E1E] h-[60px] w-[120px]  rounded-[46px] p-3" />
+              <FaApple className="text-white  bg-[#1E1E1E] h-[60px] w-[120px]  rounded-[46px] p-3" />
+              <RiTwitterXLine className="text-white  bg-[#1E1E1E] h-[60px] w-[120px]  rounded-[46px] p-3" />
+            </div>
+            {/* text */}
+            <div className="w-10/11 p-3">
+              <p className="text-white text-sm text-center">
+                By joining, you agree to the Fiverr{" "}
+                <a className="text-green-400">Terms of Service</a> and to
+                occasionally receive emails from us. Please read our{" "}
+                <a className="text-green-400">Privacy Policy</a> to learn how we
+                use your personal data.
+              </p>
+            </div>
           </div>
-          {/* text */}
-          <div className="w-10/11 p-3">
-            <p className="text-white text-sm text-center">
-              By joining, you agree to the Fiverr{" "}
-              <a className="text-green-400">Terms of Service</a> and to
-              occasionally receive emails from us. Please read our{" "}
-              <a className="text-green-400">Privacy Policy</a> to learn how we
-              use your personal data.
-            </p>
-          </div>
-          </div>
-
         </div>
 
         <div className="flex-1 min-h-full border ">
@@ -250,8 +274,6 @@ function Login() {
             src="/29cbdc3e478a6d9ca2543961ea9cfce84377972d.jpg"
             className="rounded-2xl h-full w-full object-cover"
           />
-
-
         </div>
       </section>
     </div>
